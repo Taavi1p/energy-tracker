@@ -1,8 +1,16 @@
 import React from "react";
-import "./styles/home.css"; // Import CSS
+import "./styles/home.css";
+import EIAData from "../components/EIAdata";
+import EIADataChart from "../components/EIAdatachart";
 
 const Home = () => {
-  return <h1 className="home-title">Welcome to the Home Page</h1>;
+  return (
+    <div> 
+      <div>Live energy statistics</div>
+      <EIADataChart />
+      <EIAData />
+    </div>
+  ) 
 };
 
 export default Home;

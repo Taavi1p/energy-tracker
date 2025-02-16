@@ -1,28 +1,32 @@
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #282c34;
-    color: white;
-  }
-  
-  .logo {
-    margin: 0;
-  }
-  
-  .links {
-    display: flex;
-    gap: 15px;
-  }
-  
-  .nav-link {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-  }
-  
-  .nav-link:hover {
-    text-decoration: underline;
-  }
-  
+  display: flex;
+  justify-content: space-between; /* Ensures spacing between logo and nav links */
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #282c34;
+  color: white;
+  height: 60px;
+}
+
+.nav-links {
+  display: flex;
+  flex-grow: 1;  /* Allows nav links to expand */
+  justify-content: space-evenly; /* Evenly distribute links */
+  max-width: 500px; /* Prevents spreading too far on large screens */
+}
+
+.logo {
+  flex-grow: 1; /* Allows the logo to take available space */
+  text-align: left;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 10px;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+}
