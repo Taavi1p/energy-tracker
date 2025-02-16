@@ -13,7 +13,7 @@ const EIADataChart = () => {
   return (
     <div>
       <h2>Hourly Energy Generation by Source</h2>
-      <ResponsiveContainer width="100%" height={400}>
+      <ResponsiveContainer width="100%" height={1000}>
         <BarChart data={data}>
           <XAxis dataKey="fueltype" />
           <YAxis />
