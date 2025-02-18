@@ -1,28 +1,28 @@
 import React from "react";
 import useEIAData from "../hooks/UseEIAData.js";
-import { BarChart, Bar, XAxis, YAxis, Tooltip, Legend, ResponsiveContainer } from "recharts";
+import { LineChart, Line, XAxis, YAxis, Tooltip, CartesianGrid } from "recharts";
 import Loader from "./Loader";
 import ErrorMessage from "./ErrorMessage";
+import useAggregatedEnergyData from "./useAggregatedEnergyData.js";
 
 const EIADataChart = () => {
   const { data, loading, error } = useEIAData();
+  console.log(data)
+  const aggregatedData = useAggregatedEnergyData(data);
+
 
   if (loading) return <Loader />;
   if (error) return <ErrorMessage message="Failed to load data." />;
 
+
   return (
-    <div>
-      <h2>Hourly Energy Generation by Source</h2>
-      <ResponsiveContainer width="100%" height={1000}>
-        <BarChart data={data}>
-          <XAxis dataKey="fueltype" />
-          <YAxis />
-          <Tooltip />
-          <Legend />
-          <Bar dataKey="value" fill="#8884d8" />
-        </BarChart>
-      </ResponsiveContainer>
-    </div>
+    <LineChart width={600} height={300} data={aggregatedData}>
+      <CartesianGrid strokeDasharray="3 3" />
+      <XAxis dataKey="hour" />
+      <YAxis />
+      <Tooltip />
+      <Line type="monotone" dataKey="totalValue" stroke="#8884d8" />
+    </LineChart>
   );
 };
 
