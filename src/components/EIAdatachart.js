@@ -7,16 +7,15 @@ import useAggregatedEnergyData from "./useAggregatedEnergyData.js";
 
 const EIADataChart = () => {
   const { data, loading, error } = useEIAData();
-  console.log(data)
   const aggregatedData = useAggregatedEnergyData(data);
+  console.log("final data", aggregatedData)
 
 
   if (loading) return <Loader />;
   if (error) return <ErrorMessage message="Failed to load data." />;
 
-
   return (
-    <LineChart width={600} height={300} data={aggregatedData}>
+    <LineChart width={600} height={300} data={data}>
       <CartesianGrid strokeDasharray="3 3" />
       <XAxis dataKey="hour" />
       <YAxis />

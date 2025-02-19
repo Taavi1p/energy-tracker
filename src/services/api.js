@@ -13,7 +13,8 @@ export const fetchEIAData = async () => {
         console.error("Unexpected API response format:", response.data);
         return []; // Return an empty array to prevent crashes
       }
-  
+      
+      console.log("from the source", response.data.response.data)
       return response.data.response.data; // Extract and return the correct data array
     } catch (error) {
       console.error("Error fetching data:", error);

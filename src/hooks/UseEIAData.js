@@ -21,6 +21,7 @@ const useEIAData = () => {
     getData();
   }, []);
 
+  console.log("from the hook", data)
   return { data, loading, error };
 };
 
