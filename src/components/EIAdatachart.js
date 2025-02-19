@@ -15,10 +15,10 @@ const EIADataChart = () => {
   if (error) return <ErrorMessage message="Failed to load data." />;
 
   return (
-    <LineChart width={600} height={300} data={data}>
+    <LineChart width={1000} height={500} data={aggregatedData}>
       <CartesianGrid strokeDasharray="3 3" />
-      <XAxis dataKey="hour" />
-      <YAxis />
+      <XAxis dataKey="hour" label={{ value: 'Time in UTC', angle: 0, position: 'insideBottom' }} />
+      <YAxis label={{ value: 'Energy in Mega Watt Hours', angle: -90, position: 'left' }}/>
       <Tooltip />
       <Line type="monotone" dataKey="totalValue" stroke="#8884d8" />
     </LineChart>

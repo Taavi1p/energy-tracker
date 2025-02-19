@@ -3,4 +3,10 @@
     text-align: center;
     margin-top: 20px;
   }
+
+  .nuclear-chart {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
   
