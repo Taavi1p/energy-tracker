@@ -5,7 +5,7 @@ import Loader from "./Loader";
 import ErrorMessage from "./ErrorMessage";
 import useAggregatedEnergyData from "./useAggregatedEnergyData.js";
 
-const EIADataChart = () => {
+const EIADataChart = ({ width = 1000, height = 500 }) => {
   const { data, loading, error } = useEIAData();
   const aggregatedData = useAggregatedEnergyData(data);
   console.log("final data", aggregatedData)
@@ -18,7 +18,7 @@ const EIADataChart = () => {
   };
 
   return (
-    <AreaChart width={1000} height={500} data={aggregatedData} 
+    <AreaChart width={width} height={height} data={aggregatedData} 
     margin={{
       top: 20, right: 40, bottom: 40, left: 40,
     }}>

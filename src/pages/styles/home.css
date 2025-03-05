@@ -1,6 +1,30 @@
+.home-container {
+  background: linear-gradient(to bottom, rgb(16, 26, 103), rgb(81, 80, 125));
+  min-height: calc(100vh - 80px);
+  display: flex;
+  flex-direction: column;
+}
+
 .home-title {
-    color: #007bff;
+    color: white;
     text-align: center;
     margin-top: 20px;
   }
+
+  .charts-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
+
+  .chart {
+    width: 500px;
+    margin:20px;
+  }
   
+  .chart-title {
+    text-align: center;
+    color: white;
+  }

@@ -6,22 +6,26 @@ const useEIAData = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  useEffect(() => {
-    const getData = async () => {
-      try {
-        const result = await fetchEIAData();
-        setData(result);
-      } catch (err) {
-        setError(err);
-      } finally {
-        setLoading(false);
-      }
-    };
+  const fetchData = async () => {
+    setLoading(true);
+    try {
+      const result = await fetchEIAData();
+      setData(result);
+      setError(null);
+    } catch (err) {
+      setError(err);
+    } finally {
+      setLoading(false);
+    }
+  };
 
-    getData();
+  useEffect(() => {
+    fetchData(); // Fetch data initially
+    const interval = setInterval(fetchData, 30 * 60 * 1000); // Fetch data every 30 minutes
+
+    return () => clearInterval(interval); // Cleanup interval on component unmount
   }, []);
 
-  console.log("from the hook", data)
   return { data, loading, error };
 };
 

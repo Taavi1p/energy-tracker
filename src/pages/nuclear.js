@@ -10,7 +10,7 @@ const Nuclear = () => {
         Hourly electricity generation from nuclear power plants in the United States. Time is in UTC.
       </p>
       <div className="nuclear-chart">
-        <EIADataChart />
+        <EIADataChart width={1000} height={500} />
       </div>
     </div>
   )
