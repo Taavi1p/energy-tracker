@@ -1,11 +1,10 @@
 .nuclear-container {
-  background-color: darkgreen;
+  background: linear-gradient(to bottom, darkgreen, rgb(75, 116, 75));
   color: white; 
   min-height: calc(100vh - 80px);
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   text-align: center; 
   box-sizing: border-box;
 }
@@ -15,13 +14,13 @@
 }
 
 .nuclear-title {
-    text-align: center;
-    margin-top: 20px;
-  }
+  text-align: center;
+  margin-top: 20px;
+}
 
-  .nuclear-chart {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-  }
-  
+.nuclear-chart {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}

@@ -22,7 +22,7 @@ const useAggregatedEnergyData = (apiData) => {
 
     if (Array.isArray(apiData)) {
       const aggregated = aggregateData(apiData);
-      setAggregatedData(aggregated.slice(0, -1)); // Remove the last element
+      setAggregatedData(aggregated.slice(0, -1).reverse()); // Remove the last element
     }
   }, [apiData]);
 

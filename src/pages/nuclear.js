@@ -7,7 +7,7 @@ const Nuclear = () => {
     <div className="nuclear-container">
       <h1 className="nuclear-title">Nuclear Energy Information</h1>
       <p className="nuclear-description">
-        This graph provides hourly updates on energy generation from nuclear sources in the United States.
+        Hourly electricity generation from nuclear power plants in the United States. Time is in UTC.
       </p>
       <div className="nuclear-chart">
         <EIADataChart />
