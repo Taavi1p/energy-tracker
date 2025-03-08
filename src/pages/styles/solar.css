@@ -1,6 +1,26 @@
+.solar-container {
+  background: linear-gradient(to bottom, rgb(142, 137, 3), rgb(244, 236, 27));
+  color: white; 
+  min-height: calc(100vh - 80px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center; 
+  box-sizing: border-box;
+}
+
+.solar-description {
+  margin: 20px 0; 
+}
+
 .solar-title {
-    color: #f4c20d;
-    text-align: center;
-    margin-top: 20px;
-  }
-  
+  text-align: center;
+  margin-top: 20px;
+}
+
+.solar-chart {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}

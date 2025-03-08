@@ -1,27 +1,21 @@
 import React from "react";
-import useEIAData from "../hooks/UseEIAData.js";
-import { AreaChart, Area, XAxis, YAxis, Tooltip, CartesianGrid, defs, linearGradient, stop } from "recharts";
-import Loader from "./Loader";
-import ErrorMessage from "./ErrorMessage";
-import useAggregatedEnergyData from "./useAggregatedEnergyData.js";
+import { AreaChart, Area, XAxis, YAxis, Tooltip, CartesianGrid } from "recharts";
 
-const EIADataChart = ({ width = 1000, height = 500 }) => {
-  const { data, loading, error } = useEIAData();
-  const aggregatedData = useAggregatedEnergyData(data);
-  console.log("final data", aggregatedData)
-
-  if (loading) return <Loader />;
-  if (error) return <ErrorMessage message="Failed to load data." />;
-
+const CustomAreaChart = ({ data, width, height }) => {
   const formatYAxis = (tickItem) => {
     return `${Math.round(tickItem / 1000)}k`;
   };
 
+  const formatXAxis = (tickItem) => {
+    const date = new Date(tickItem);
+    return `${date.getUTCDate()} ${date.getUTCHours()}:00`;
+  };
+
   return (
-    <AreaChart width={width} height={height} data={aggregatedData} 
-    margin={{
-      top: 20, right: 40, bottom: 40, left: 40,
-    }}>
+    <AreaChart width={width} height={height} data={data} 
+      margin={{
+        top: 20, right: 40, bottom: 40, left: 40,
+      }}>
       <defs>
         <linearGradient id="colorWhite" x1="0" y1="0" x2="0" y2="1">
           <stop offset="5%" stopColor="#ffffff" stopOpacity={0.8}/>
@@ -29,7 +23,12 @@ const EIADataChart = ({ width = 1000, height = 500 }) => {
         </linearGradient>
       </defs>
       <CartesianGrid strokeDasharray="3 3" />
-      <XAxis dataKey="hour" label={{ value: 'Time in UTC', angle: 0, position: 'bottom', fill: '#ffffff' }} tick={{ fill: '#ffffff' }} />
+      <XAxis 
+        dataKey="hour" 
+        label={{ value: 'Time in UTC', angle: 0, position: 'bottom', fill: '#ffffff' }} 
+        tick={{ fill: '#ffffff' }} 
+        tickFormatter={formatXAxis}
+      />
       <YAxis 
         label={{ value: 'Energy in Mega Watt Hours', angle: -90, position: 'insideLeft', fill: '#ffffff', dy: 100 }}
         tick={{ fill: '#ffffff' }}
@@ -42,4 +41,4 @@ const EIADataChart = ({ width = 1000, height = 500 }) => {
   );
 };
 
-export default EIADataChart;
+export default CustomAreaChart;

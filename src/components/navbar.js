@@ -11,6 +11,7 @@ const Navbar = () => {
         <Link to="/nuclear" className="nav-link">Nuclear</Link>
         <Link to="/solar" className="nav-link">Solar</Link>
         <Link to="/wind" className="nav-link">Wind</Link>
+        <Link to="/hydro" className="nav-link">Hydro</Link>
       </div>
     </nav>
   );

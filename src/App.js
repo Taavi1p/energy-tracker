@@ -5,6 +5,7 @@ import Home from "./pages/home";
 import Nuclear from "./pages/nuclear";
 import Solar from "./pages/solar";
 import Wind from "./pages/wind";
+import Hydro from "./pages/hydro";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/nuclear" element={<Nuclear />} />
           <Route path="/solar" element={<Solar />} />
           <Route path="/wind" element={<Wind />} />
+          <Route path="/hydro" element={<Hydro />} />
         </Routes>
       </div>
     </Router>

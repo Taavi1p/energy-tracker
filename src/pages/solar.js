@@ -1,8 +1,19 @@
 import React from "react";
 import "./styles/solar.css";
+import EIADataChart from "../components/SolarChart";
 
 const Solar = () => {
-  return <h1 className="solar-title">Solar Energy Information</h1>;
+  return (
+    <div className="solar-container">
+      <h1 className="solar-title">Solar Power Generation</h1>
+      <p className="solar-description">
+        Hourly electricity generation from solar power plants in the United States. Time is in UTC.
+      </p>
+      <div className="solar-chart">
+        <EIADataChart width={1000} height={500} />
+      </div>
+    </div>
+  )
 };
 
 export default Solar;

@@ -1,6 +1,9 @@
 import React from "react";
 import "./styles/home.css";
-import EIADataChart from "../components/EIAdatachart";
+import NuclearChart from "../components/NuclearChart";
+import SolarChart from "../components/SolarChart";
+import WindChart from "../components/WindChart";
+import HydroChart from "../components/HydroChart";
 
 const Home = () => {
   return (
@@ -8,20 +11,20 @@ const Home = () => {
       <h1 className="home-title">Live energy graphs</h1>  
       <div className="charts-container">
         <div className="chart">
-          <h2 className="chart-title">electricity from nuclear</h2>
-          <EIADataChart width={600} height={300} />
+          <h2 className="chart-title">Electricity From Nuclear</h2>
+          <NuclearChart width={600} height={300} />
         </div>
         <div className="chart">
-          <h2 className="chart-title">electricity from solar</h2>
-          <EIADataChart width={600} height={300}/>
+          <h2 className="chart-title">Electricity From Solar</h2>
+          <SolarChart width={600} height={300}/>
         </div>
         <div className="chart">
-          <h2 className="chart-title">electricity from wind</h2>
-          <EIADataChart width={600} height={300}/>
+          <h2 className="chart-title">Electricity From Wind</h2>
+          <WindChart width={600} height={300}/>
         </div>
         <div className="chart">
-          <h2 className="chart-title">electricity from natural gas</h2>
-          <EIADataChart width={600} height={300}/>
+          <h2 className="chart-title">Electricity From Hydro Power</h2>
+          <HydroChart width={600} height={300}/>
         </div>
       </div>
     </div>

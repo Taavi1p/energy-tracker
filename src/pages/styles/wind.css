@@ -1,6 +1,26 @@
+.wind-container {
+  background: linear-gradient(to bottom, rgb(142, 137, 3), rgb(244, 236, 27));
+  color: white; 
+  min-height: calc(100vh - 80px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center; 
+  box-sizing: border-box;
+}
+
+.wind-description {
+  margin: 20px 0; 
+}
+
 .wind-title {
-    color: #17a2b8;
-    text-align: center;
-    margin-top: 20px;
-  }
-  
+  text-align: center;
+  margin-top: 20px;
+}
+
+.wind-chart {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
