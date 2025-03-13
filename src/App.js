@@ -9,7 +9,7 @@ import Hydro from "./pages/hydro";
 
 function App() {
   return (
-    <Router>
+    <Router basename="/energy-tracker">
       <Navbar />
       <div>
         <Routes>
