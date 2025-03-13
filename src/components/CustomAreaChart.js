@@ -7,8 +7,13 @@ const CustomAreaChart = ({ data, width, height }) => {
   };
 
   const formatXAxis = (tickItem) => {
-    const date = new Date(tickItem);
-    return `${date.getUTCDate()} ${date.getUTCHours()}:00`;
+    const [datePart, hourPart] = tickItem.split('T');
+    //const date = new Date(datePart);
+    //const month = date.getUTCMonth() + 1; // getUTCMonth() returns month from 0-11, so add 1
+    //const day = date.getUTCDate();
+    const hours = hourPart;
+    //return `${month}-${day} ${hours}:00`;
+    return `${hours}:00`;
   };
 
   return (
