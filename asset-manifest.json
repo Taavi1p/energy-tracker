@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/energy-tracker/static/css/main.f90d012a.css",
-    "main.js": "/energy-tracker/static/js/main.1ef5dda3.js",
+    "main.js": "/energy-tracker/static/js/main.0add0f83.js",
     "static/js/488.a1ab40a9.chunk.js": "/energy-tracker/static/js/488.a1ab40a9.chunk.js",
     "index.html": "/energy-tracker/index.html",
     "main.f90d012a.css.map": "/energy-tracker/static/css/main.f90d012a.css.map",
-    "main.1ef5dda3.js.map": "/energy-tracker/static/js/main.1ef5dda3.js.map",
+    "main.0add0f83.js.map": "/energy-tracker/static/js/main.0add0f83.js.map",
     "488.a1ab40a9.chunk.js.map": "/energy-tracker/static/js/488.a1ab40a9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f90d012a.css",
-    "static/js/main.1ef5dda3.js"
+    "static/js/main.0add0f83.js"
   ]
 }
