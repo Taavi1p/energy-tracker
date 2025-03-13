@@ -35,10 +35,11 @@ const CustomAreaChart = ({ data, width, height }) => {
         tickFormatter={formatXAxis}
       />
       <YAxis 
-        label={{ value: 'Energy in Mega Watt Hours', angle: -90, position: 'insideLeft', fill: '#ffffff', dy: 100 }}
+        label={{ value: 'Energy (MW/h)', angle: -90, position: 'insideLeft', fill: '#ffffff', dy: 100 }}
         tick={{ fill: '#ffffff' }}
         domain={[dataMin => dataMin - 1000, dataMax => dataMax + 1000]}
         tickFormatter={formatYAxis}
+        tickCount={8}
       />
       <Tooltip contentStyle={{ backgroundColor: '#333', borderColor: '#333' }} itemStyle={{ color: '#ffffff' }} />
       <Area type="monotone" dataKey="totalValue" stroke="#ffffff" fill="url(#colorWhite)" />

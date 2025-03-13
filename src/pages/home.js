@@ -8,7 +8,9 @@ import HydroChart from "../components/HydroChart";
 const Home = () => {
   return (
     <div className="home-container"> 
-      <h1 className="home-title">Live Power Production Graphs</h1>  
+      <h1 className="home-title">Live Power Production Graphs</h1> 
+      <p className="home-description"> 
+        Hourly electricity production in the US from various sources.</p> 
       <div className="charts-container">
         <div className="chart">
           <h2 className="chart-title">Electricity From Nuclear</h2>
