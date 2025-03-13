@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Taavi1p/energy-tracker/static/css/main.f90d012a.css",
+    "main.js": "/Taavi1p/energy-tracker/static/js/main.8e901227.js",
+    "static/js/488.a1ab40a9.chunk.js": "/Taavi1p/energy-tracker/static/js/488.a1ab40a9.chunk.js",
+    "index.html": "/Taavi1p/energy-tracker/index.html",
+    "main.f90d012a.css.map": "/Taavi1p/energy-tracker/static/css/main.f90d012a.css.map",
+    "main.8e901227.js.map": "/Taavi1p/energy-tracker/static/js/main.8e901227.js.map",
+    "488.a1ab40a9.chunk.js.map": "/Taavi1p/energy-tracker/static/js/488.a1ab40a9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f90d012a.css",
+    "static/js/main.8e901227.js"
+  ]
+}
