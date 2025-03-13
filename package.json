@@ -1,8 +1,8 @@
 {
+  "homepage": "https://taavi1p.github.io/energy-tracker",
   "name": "energy-tracker",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/Taavi1p/energy-tracker",
   "dependencies": {
     "axios": "^1.7.9",
     "cra-template": "1.2.0",
