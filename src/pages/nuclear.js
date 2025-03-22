@@ -1,6 +1,8 @@
 import React from "react";
 import "./styles/nuclear.css";
 import EIADataChart from "../components/NuclearChart";
+import EnergyProducersList from "../components/EnergyProducersList";
+import { fetchEIAData } from "../services/api";
 
 const Nuclear = () => {
   return (
@@ -12,6 +14,10 @@ const Nuclear = () => {
       <div className="nuclear-chart">
         <EIADataChart width={1000} height={500} />
       </div>
+      <div>
+      <h1>Nuclear Energy Producers</h1>
+      <EnergyProducersList fetchDataFunction={fetchEIAData} energyType="NUC" />
+    </div>
     </div>
   )
 };

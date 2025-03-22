@@ -1,0 +1,28 @@
+.producers-container {
+  margin: 20px;
+  padding: 10px;
+}
+
+.producers-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.producer-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.producer-name {
+  font-weight: bold;
+  color: white;
+}
+
+.producer-value {
+  color: white;
+}

@@ -1,6 +1,8 @@
 import React from "react";
 import "./styles/wind.css";
 import EIADataChart from "../components/WindChart";
+import EnergyProducersList from "../components/EnergyProducersList";
+import { fetchWindData } from "../services/fetchWindData";
 
 const Wind = () => {
   return (
@@ -12,6 +14,10 @@ const Wind = () => {
       <div className="wind-chart">
         <EIADataChart width={1000} height={500} />
       </div>
+      <div>
+      <h1>Wind Energy Producers</h1>
+      <EnergyProducersList fetchDataFunction={fetchWindData} energyType="WND" />
+    </div>
     </div>
   )
 };

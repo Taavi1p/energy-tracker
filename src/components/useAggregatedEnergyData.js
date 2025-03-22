@@ -9,7 +9,7 @@ const useAggregatedEnergyData = (apiData) => {
       const result = {};
 
       data.forEach(({ period, value }) => {
-        console.log("enters loop", period, value);
+        //console.log("enters loop", period, value);
         if (result[period]) {
           result[period] += parseInt(value, 10);
         } else {

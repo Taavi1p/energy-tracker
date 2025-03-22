@@ -1,6 +1,8 @@
 import React from "react";
 import "./styles/hydro.css";
 import EIADataChart from "../components/HydroChart";
+import EnergyProducersList from "../components/EnergyProducersList";
+import { fetchHydroData } from "../services/fetchHydroData";
 
 const Hydro = () => {
   return (
@@ -12,6 +14,10 @@ const Hydro = () => {
       <div className="hydro-chart">
         <EIADataChart width={1000} height={500} />
       </div>
+      <div>
+      <h1>Hydro Energy Producers</h1>
+      <EnergyProducersList fetchDataFunction={fetchHydroData} energyType="WAT" />
+    </div>
     </div>
   )
 };

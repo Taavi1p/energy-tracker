@@ -1,6 +1,8 @@
 import React from "react";
 import "./styles/solar.css";
 import EIADataChart from "../components/SolarChart";
+import EnergyProducersList from "../components/EnergyProducersList";
+import { fetchSolarData } from "../services/fetchSolarData";
 
 const Solar = () => {
   return (
@@ -12,6 +14,10 @@ const Solar = () => {
       <div className="solar-chart">
         <EIADataChart width={1000} height={500} />
       </div>
+      <div>
+      <h1>Solar Energy Producers</h1>
+      <EnergyProducersList fetchDataFunction={fetchSolarData} energyType="SUN" />
+    </div>
     </div>
   )
 };
