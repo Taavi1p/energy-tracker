@@ -1,9 +1,9 @@
 import React from "react";
-import "./styles/home.css";
-import NuclearChart from "../components/NuclearChart";
-import SolarChart from "../components/SolarChart";
-import WindChart from "../components/WindChart";
-import HydroChart from "../components/HydroChart";
+import "./home.css";
+import NuclearChart from "../../components/NuclearChart";
+import SolarChart from "../../components/SolarChart";
+import WindChart from "../../components/WindChart";
+import HydroChart from "../../components/HydroChart";
 
 const Home = () => {
   return (

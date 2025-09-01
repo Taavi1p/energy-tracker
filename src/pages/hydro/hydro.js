@@ -1,8 +1,8 @@
 import React from "react";
-import "./styles/hydro.css";
-import EIADataChart from "../components/HydroChart";
-import EnergyProducersList from "../components/EnergyProducersList";
-import { fetchHydroData } from "../services/fetchHydroData";
+import "./hydro.css";
+import EIADataChart from "../../components/HydroChart";
+import EnergyProducersList from "../../components/EnergyProducersList";
+import { fetchHydroData } from "../../services/fetchHydroData";
 
 const Hydro = () => {
   return (

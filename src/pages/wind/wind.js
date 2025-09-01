@@ -1,8 +1,8 @@
 import React from "react";
-import "./styles/wind.css";
-import EIADataChart from "../components/WindChart";
-import EnergyProducersList from "../components/EnergyProducersList";
-import { fetchWindData } from "../services/fetchWindData";
+import "./wind.css";
+import EIADataChart from "../../components/WindChart";
+import EnergyProducersList from "../../components/EnergyProducersList";
+import { fetchWindData } from "../../services/fetchWindData";
 
 const Wind = () => {
   return (

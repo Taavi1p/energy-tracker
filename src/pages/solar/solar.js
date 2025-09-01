@@ -1,8 +1,8 @@
 import React from "react";
-import "./styles/solar.css";
-import EIADataChart from "../components/SolarChart";
-import EnergyProducersList from "../components/EnergyProducersList";
-import { fetchSolarData } from "../services/fetchSolarData";
+import "./solar.css";
+import EIADataChart from "../../components/SolarChart";
+import EnergyProducersList from "../../components/EnergyProducersList";
+import { fetchSolarData } from "../../services/fetchSolarData";
 
 const Solar = () => {
   return (

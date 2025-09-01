@@ -1,8 +1,8 @@
 import React from "react";
-import "./styles/nuclear.css";
-import EIADataChart from "../components/NuclearChart";
-import EnergyProducersList from "../components/EnergyProducersList";
-import { fetchEIAData } from "../services/api";
+import "./nuclear.css";
+import EIADataChart from "../../components/NuclearChart";
+import EnergyProducersList from "../../components/EnergyProducersList";
+import { fetchEIAData } from "../../services/api";
 
 const Nuclear = () => {
   return (

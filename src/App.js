@@ -1,11 +1,11 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/navbar";
-import Home from "./pages/home";
-import Nuclear from "./pages/nuclear";
-import Solar from "./pages/solar";
-import Wind from "./pages/wind";
-import Hydro from "./pages/hydro";
+import Home from "./pages/home/home";
+import Nuclear from "./pages/nuclear/nuclear";
+import Solar from "./pages/solar/solar";
+import Wind from "./pages/wind/wind";
+import Hydro from "./pages/hydro/hydro";
 
 function App() {
   return (
